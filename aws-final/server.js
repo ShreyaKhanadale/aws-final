@@ -323,10 +323,34 @@ app.get("/chart", (req, res) => {
     res.sendFile(path.join(__dirname, "views", "chart.html"));
 });
 
+
+app.get("/login", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "login.html"));
+});
+
+app.get("/admin", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "admin.html"));
+});
+
+
+// app.get("/", (req, res) => {
+//     res.render("index");
+// });
+
+app.get("/about", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "about.html"));
+});
+
+
 // 3️⃣ Route for **Analytics Page (analytics.ejs)**
 app.get("/analytics", (req, res) => {
     res.render("analytics", { foodDataHistory });
 });
+
+
+
+
+
 
 // ✅ Start the Server
 server.listen(3000, () => {

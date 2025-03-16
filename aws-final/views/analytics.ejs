@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FreshTrackPro Dashboard</title>
-    
+
     <!-- ✅ Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <script src="/socket.io/socket.io.js"></script>
@@ -37,7 +38,8 @@
             overflow-y: auto;
         }
 
-        .sidebar a, .sidebar .logout {
+        .sidebar a,
+        .sidebar .logout {
             padding: 15px;
             display: block;
             color: white;
@@ -46,14 +48,16 @@
             cursor: pointer;
         }
 
-        .sidebar a:hover, .sidebar .logout:hover {
+        .sidebar a:hover,
+        .sidebar .logout:hover {
             background-color: #34495e;
         }
 
         /* Main Content */
         .main-content {
             flex: 1;
-            padding: 80px 20px 20px 270px; /* Adjusted for sidebar */
+            padding: 80px 20px 20px 270px;
+            /* Adjusted for sidebar */
         }
 
         /* Table Styling */
@@ -67,7 +71,8 @@
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid black;
             padding: 10px;
             text-align: left;
@@ -89,6 +94,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- ✅ Navbar -->
@@ -101,9 +107,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarToggler">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Contact</a></li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search">
@@ -113,13 +119,13 @@
         </div>
     </nav>
 
-    <!-- ✅ Sidebar -->
+    <!-- Sidebar -->
     <div class="sidebar">
-        <a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a>
-        <a href="analytics.html"><i class="fas fa-chart-bar"></i> Analytics</a>
-        <!-- <a href="freshness.html"><i class="fas fa-seedling"></i> Freshness Check</a> -->
-        <a href="chart.html"><i class="fas fa-chart-pie"></i> Chart</a>
-        <div class="logout" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</div>
+        <a href="/admin"><i class="fas fa-user-shield"></i> Admin</a>
+        <a href="/analytics"><i class="fas fa-chart-bar"></i> Analytics</a>
+        <!-- <a href="chart.ejs" ><i class="fas fa-chart-bar"></i> Chart</a>      -->
+        <a href="/chart"><i class="fas fa-chart-pie"></i> Chart</a>
+        <div href="/logout" class="logout" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</div>
     </div>
 
     <!-- ✅ Main Content -->
@@ -161,4 +167,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
